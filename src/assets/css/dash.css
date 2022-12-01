@@ -117,9 +117,6 @@ body{
     transition: 0.5s;
 }
 
-
-
-  
   /* ====================== Responsive ========================== */
   @media (max-width: 991px) {
     .navigation {

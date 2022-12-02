@@ -10,7 +10,7 @@ import {
 } from "@tremor/react";
 import React from "react";
 import DatePicker from "./DatePicker";
-import TableBase from "./TableBase";
+import TableCalendar from "./TableCalendar";
 
 const PagosRest = () => {
   return (
@@ -71,7 +71,7 @@ const PagosRest = () => {
       <Col numColSpan={2} numColSpanLg={3}>
         <Card>
           <Title>Resumen:</Title>
-          <TableBase></TableBase>
+          <TableCalendar></TableCalendar>
         </Card>
       </Col>
     </ColGrid>

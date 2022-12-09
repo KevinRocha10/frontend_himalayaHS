@@ -1,6 +1,6 @@
 import "./App.css";
-// import Charts from "./components/Charts";
 import DashboardBase from "./components/DashboardBase";
+// import LoginForm from "./components/login";
 
 // importamos los componentes
 // import CompShowBlogs from "./components/ShowBlogs";
@@ -13,10 +13,8 @@ import DashboardBase from "./components/DashboardBase";
 function App() {
   return (
     <div>
-      {/* <CardBase></CardBase> */}
-      {/* <TabListBase></TabListBase> */}
-      {/* <Charts></Charts> */}
       <DashboardBase></DashboardBase>
+      {/* <LoginForm></LoginForm> */}
     </div>
 
     // <div className="App">

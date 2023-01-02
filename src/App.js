@@ -1,14 +1,8 @@
 import "./App.css";
-import DashboardBase from "./components/DashboardBase";
-// import LoginForm from "./components/login";
 
 // importamos los componentes
-// import CompShowBlogs from "./components/ShowBlogs";
-// import CompCreateBlog from "./components/CreateBlog";
-// import CompEditBlog from "./components/EditBlog";
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import CardBase from "./components/CardBase";
-// import TabListBase from "./components/TabListBase";
+import DashboardBase from "./components/DashboardBase";
+// import LoginForm from "./components/login";
 
 function App() {
   return (
@@ -16,6 +10,8 @@ function App() {
       <DashboardBase></DashboardBase>
       {/* <LoginForm></LoginForm> */}
     </div>
+
+    //
 
     // <div className="App">
     //   <header className="App-header">

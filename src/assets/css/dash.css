@@ -10,7 +10,7 @@
 }
 
 :root {
-  --blue: #489999;
+  --blue: #3483cd;
   --white: #fff;
   --gray: #f5f5f5;
   --black1: #222;
@@ -23,18 +23,19 @@ body{
 }
 
 .container{
-    position: relative;
+    position: unset;
     width: 100%;
 }
 
 /*Estilo Barra*/
 
 .navigation{
-    position: fixed;
+    position: unset;
     width: 400px;
     height: 100%;
     background: var(--blue);
-    border-left: 10px solid var(--blue);
+    /* background:#222; */
+    border-left: -20px solid var(--blue);
     transition: 0.5s;
     overflow: hidden;
 }
@@ -60,7 +61,7 @@ body{
 
 .navigation ul li:hover,
 .navigation ul li.hovered {
-    background-color: var(--white);
+    background-color: var(--blue);
 }
 
 .navigation ul li:nth-child(1){ 
@@ -74,12 +75,12 @@ body{
     width: 100%;
     display: flex;
     text-decoration: none;
-    color: var(--white);
+    color: var(--black1);
 }
 
 .navigation ul li:hover a,
 .navigation ul li.hovered a{
-    color: var(--blue);
+    color: var(--white);
 }
 
 .navigation ul li a .icon{

@@ -1,9 +1,32 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
-import logo from "../assets/img/logos.jpg";
 import "../assets/css/login.css";
+import React from "react";
+import { useState } from "react";
+import axios from "axios";
+import logo from "../assets/img/logos.jpg";
 
-const login = () => {
+function Log() {
+  const [datos, setDatos] = useState({
+    usuario: "",
+    clave: "",
+  });
+
+  const handleInputChange = (e) => {
+    let { name, value } = e.target;
+    let newDatos = { ...datos, [name]: value };
+    setDatos(newDatos);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!e.target.checkValidity()) {
+      console.log("no enviar");
+    } else {
+      let res = await axios.post("http://localhost:3001/login", datos);
+      console.log(res.data);
+    }
+  };
+
   return (
     <div>
       <div id="Frase">
@@ -27,7 +50,12 @@ const login = () => {
 
       <div className="container" id="container">
         <div className="form-container sign-in-container">
-          <form action="#">
+          <form
+            onSubmit={handleSubmit}
+            className="needs-validation"
+            noValidate={true}
+            autoComplete="off"
+          >
             <h1>LOG IN</h1>
             <div className="social-container">
               <header>
@@ -43,10 +71,27 @@ const login = () => {
               </header>
             </div>
             <span></span>
-            <input type="usuario" placeholder="User" />
-            <input type="password" placeholder="Password" />
+            <input
+              id="email"
+              type="text"
+              onChange={handleInputChange}
+              value={datos.usuario}
+              className="form-control"
+              name="usuario"
+              required
+              autoFocus
+            />
+            <input
+              id="password"
+              type="password"
+              onChange={handleInputChange}
+              value={datos.clave}
+              className="form-control"
+              name="clave"
+              required
+            />
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <button>
+            <button type="submit" className="btn btn-primary">
               <link href="#"></link>Entrar
             </button>
           </form>
@@ -61,6 +106,6 @@ const login = () => {
       </div>
     </div>
   );
-};
+}
 
-export default login;
+export default Log;

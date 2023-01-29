@@ -9,8 +9,8 @@ import {
   Button,
 } from "@tremor/react";
 import React from "react";
-import DatePicker from "./DatePicker";
-import TableCalendar from "./TableCalendar";
+import DatePicker from "../dashboard/DatePicker";
+import TableCalendar from "../dashboard/TableCalendar";
 
 const PagosRest = () => {
   return (
@@ -67,6 +67,7 @@ const PagosRest = () => {
         </Card>
       </Col>
       <Button text="Pagar"></Button>
+      {/*  */}
       <Button text="Cancelar"></Button>
       <Col numColSpan={2} numColSpanLg={3}>
         <Card>

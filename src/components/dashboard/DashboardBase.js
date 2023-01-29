@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Title, Text, TabList, Tab, Block } from "@tremor/react";
-import CardGridMap from "./CardGridMap";
-import Charts from "./Charts";
-import TableBase from "./TableBase";
-import "../assets/css/dash.css";
-import PagosRest from "./PagosRest";
+import CardGridMap from "../dashboard/CardGridMap";
+import Charts from "../dashboard/Charts";
+import TableBase from "../dashboard/TableBase";
+// import "../assets/css/dash.css";
+import "../dashboard/dash.css";
+import PagosRest from "../dashboard/PagosRest";
 
 const DashboardBase = () => {
   const [selectedView, setSelectedview] = useState(1);
@@ -64,8 +65,8 @@ const DashboardBase = () => {
             marginTop="mt-6"
           >
             <Tab value={1} text="Menú Principal" />
-            <Tab value={2} text="Detalles" />
-            <Tab value={3} text="Registrar Pago" />
+            <Tab value={2} text="Registrar Pago" />
+            <Tab value={3} text="Detalles" />
           </TabList>
 
           {/*operadores ternarios para la seleccion de vistas */}
@@ -82,12 +83,12 @@ const DashboardBase = () => {
             // para vista detalles
             <>
               <Block marginTop="mt-6">
-                <TableBase></TableBase>
+                <PagosRest></PagosRest>
               </Block>
             </>
           ) : (
             <Block marginTop="mt-6">
-              <PagosRest></PagosRest>
+              <TableBase></TableBase>
             </Block>
           )}
         </main>

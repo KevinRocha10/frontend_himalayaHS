@@ -1,8 +1,8 @@
 import "./App.css";
 
 // importamos los componentes
-import DashboardBase from "./components/DashboardBase";
-// import LoginForm from "./components/login";
+import DashboardBase from "./components/dashboard/DashboardBase";
+// import LoginForm from "./components/logueo/login";
 
 function App() {
   return (

@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import "../assets/css/login.css";
+// import "../assets/css/login.css";
+import "./login.css";
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import logo from "../assets/img/logos.jpg";
+//import logo from "../assets/img/logos.jpg";
+import logo from "../img/logos.jpg";
 
 function Log() {
   const [datos, setDatos] = useState({

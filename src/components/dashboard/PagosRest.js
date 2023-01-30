@@ -3,6 +3,7 @@ import {
   Col,
   Card,
   Text,
+  TextInput,
   Title,
   Dropdown,
   DropdownItem,
@@ -10,7 +11,8 @@ import {
 } from "@tremor/react";
 import React from "react";
 import DatePicker from "../dashboard/DatePicker";
-import TableCalendar from "../dashboard/TableCalendar";
+import TableCalendar from "./TableCalendar";
+// import ModalRecibo from "../dashboard/ModalRecibo";
 
 const PagosRest = () => {
   return (
@@ -26,13 +28,13 @@ const PagosRest = () => {
           <Title>Datos Alumno</Title>
           <form>
             <Text marginTop="mt-3">Nombre del alumno: </Text>
-            <input type="text" name="name" placeholder="" />
+            <TextInput type="text" name="name" placeholder="" />
             <Text marginTop="mt-3">Grado: </Text>
-            <input type="text" name="name" placeholder="" />
+            <TextInput type="text" name="name" placeholder="" />
             <Text marginTop="mt-3">Cod/Estudiante: </Text>
-            <input type="text" name="name" placeholder="" />
+            <TextInput type="text" name="name" placeholder="" />
             <Text marginTop="mt-3">Acudiente: </Text>
-            <input type="text" name="name" placeholder="" />
+            <TextInput type="text" name="name" placeholder="" />
           </form>
         </Card>
       </Col>
@@ -61,13 +63,12 @@ const PagosRest = () => {
           </Dropdown>
           {/*  */}
           <Text marginTop="mt-3">Valor Unidad: </Text>
-          <input type="text" name="name" placeholder="" />
+          <TextInput type="text" name="name" placeholder="" />
           <Text marginTop="mt-3">Valor Total: </Text>
-          <input type="text" name="name" placeholder="" />
+          <TextInput type="text" name="name" placeholder="" />
         </Card>
       </Col>
-      <Button text="Pagar"></Button>
-      {/*  */}
+      <Button text="Pagar">{/* <ModalRecibo></ModalRecibo> */}</Button>
       <Button text="Cancelar"></Button>
       <Col numColSpan={2} numColSpanLg={3}>
         <Card>

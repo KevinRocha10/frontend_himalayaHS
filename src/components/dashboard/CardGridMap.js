@@ -12,7 +12,7 @@ import React from "react";
 
 const data = [
   {
-    title: "Sales",
+    title: "Almuerzos Vendidos",
     metric: "$12.000",
     progress: 15.9,
     target: "80,000",
@@ -20,7 +20,7 @@ const data = [
     deltaType: "moderateIncrease",
   },
   {
-    title: "Customer",
+    title: "Almuerzos Consumidos",
     metric: "$22.000",
     progress: 36.2,
     target: "80,000",
@@ -28,7 +28,15 @@ const data = [
     deltaType: "moderateIncrease",
   },
   {
-    title: "Profit",
+    title: "Loncheras Vendidas",
+    metric: "$42.000",
+    progress: 50.3,
+    target: "80,000",
+    delta: "43,2%",
+    deltaType: "moderateIncrease",
+  },
+  {
+    title: "Loncheras Consumidas",
     metric: "$42.000",
     progress: 50.3,
     target: "80,000",

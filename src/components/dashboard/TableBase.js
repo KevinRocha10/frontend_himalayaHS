@@ -1,4 +1,4 @@
-import { Card, Title } from "@tremor/react";
+import { Card, Title, TextInput } from "@tremor/react";
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DataTable from "react-data-table-component";
@@ -41,6 +41,11 @@ class TableBase extends Component {
   render() {
     return (
       <Card>
+        <TextInput
+          // icon={ SearchIcon }
+          placeholder="Search..."
+          maxWidth="max-w-0"
+        />
         <Title> Lista de los datos</Title>
         <div className="table-responsive">
           <DataTable

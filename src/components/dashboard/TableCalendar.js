@@ -66,9 +66,9 @@ function TableCalendar() {
 
   return (
     <div className="App">
-      {/* <h1>Calendar</h1>
-      <h2>Add New Event</h2> */}
-      {/* <div>
+      <h1>Calendar</h1>
+      <h2>Add New Event</h2>
+      <div>
         <input
           type="text"
           placeholder="Add Title"
@@ -90,7 +90,7 @@ function TableCalendar() {
         <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Add Event
         </button>
-      </div> */}
+      </div>
       <Calendar
         localizer={localizer}
         events={allEvents}

@@ -1,15 +1,17 @@
-import { Datepicker } from "@tremor/react";
+import { DateRangePicker } from "@tremor/react";
+
 import React from "react";
 
 const DatePicker = () => {
   return (
-    <Datepicker
-      placeholder="Seleccione:"
-      enableRelativeDates={true}
-      handleSelect={undefined}
-      defaultStartDate={null}
-      defaultEndDate={null}
-      defaultRelativeFilterOption={null}
+    <DateRangePicker
+      value={undefined}
+      defaultValue={undefined}
+      onValueChange={undefined}
+      options={undefined}
+      enableDropdown={true}
+      placeholder="Select..."
+      enableYearPagination={false}
       minDate={null}
       maxDate={null}
       color="blue"

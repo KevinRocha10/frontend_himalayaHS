@@ -12,7 +12,7 @@ import {
 import React from "react";
 import DatePicker from "../dashboard/DatePicker";
 import TableCalendar from "./TableCalendar";
-import ModalRecibo from "../dashboard/ModalRecibo";
+import ModalAviso from "./ModalAviso";
 
 const PagosRest = () => {
   return (
@@ -68,7 +68,7 @@ const PagosRest = () => {
           <TextInput type="text" name="name" placeholder="" />
         </Card>
       </Col>
-      <ModalRecibo></ModalRecibo>
+      <ModalAviso></ModalAviso>
       <Button text="Cancelar"></Button>
       <Col numColSpan={2} numColSpanLg={3}>
         <Card>

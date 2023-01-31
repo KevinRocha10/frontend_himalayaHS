@@ -3,12 +3,14 @@ import "./App.css";
 // importamos los componentes
 import DashboardBase from "./components/dashboard/DashboardBase";
 // import LoginForm from "./components/logueo/login";
+// import ModalRecibo from "./components/dashboard/ModalRecibo";
 
 function App() {
   return (
     <div>
       <DashboardBase></DashboardBase>
       {/* <LoginForm></LoginForm> */}
+      {/* <ModalRecibo></ModalRecibo> */}
     </div>
 
     // <div className="App">

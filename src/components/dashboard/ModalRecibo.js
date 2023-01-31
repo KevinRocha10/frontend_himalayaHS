@@ -1,27 +1,34 @@
-import { Button, Modal } from "bootstrap";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
-function StaticExample() {
+function Example() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div
-      className="modal show"
-      style={{ display: "block", position: "initial" }}
-    >
-      <Modal.Dialog>
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        Guardar
+      </Button>
+
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Guardar</Modal.Title>
         </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
+        <Modal.Body>Esta seguro que quiere guardar!</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Guardar cambios
+          </Button>
         </Modal.Footer>
-      </Modal.Dialog>
-    </div>
+      </Modal>
+    </>
   );
 }
 
-export default StaticExample;
+export default Example;

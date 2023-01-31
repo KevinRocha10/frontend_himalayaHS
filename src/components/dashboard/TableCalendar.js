@@ -23,8 +23,8 @@ const events = [
   {
     title: "Big Meeting",
     allDay: true,
-    start: new Date(2021, 6, 0),
-    end: new Date(2021, 6, 0),
+    start: new Date(2023, 1, 20),
+    end: new Date(2023, 1, 30),
   },
   {
     title: "Vacation",

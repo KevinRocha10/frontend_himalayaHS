@@ -92,7 +92,7 @@ export default function Example() {
   return (
     <Card>
       <Flex justifyContent="justify-start" spaceX="space-x-2">
-        <Title>Purchases</Title>
+        <Title>Resumen RESTAURANTE</Title>
         <Badge text="8" color="gray" />
       </Flex>
 

@@ -1,33 +1,29 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import "../assets/css/login.css";
-import "./login.css";
+import "../../assets/css/login.css";
 import React from "react";
-import { useState } from "react";
-import axios from "axios";
-//import logo from "../assets/img/logos.jpg";
-import logo from "../img/logos.jpg";
+// import Axios from "axios";
+import logo from "../../assets/img/logos.jpg";
 
-function Log() {
-  const [datos, setDatos] = useState({
-    usuario: "",
-    clave: "",
-  });
+function Logueo() {
+  // const [body, setbody] = useState({ username: "", password: "" });
+  // const [username, setUserName] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const handleInputChange = (e) => {
-    let { name, value } = e.target;
-    let newDatos = { ...datos, [name]: value };
-    setDatos(newDatos);
-  };
+  // const [loginStatus, setLoginStatus] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!e.target.checkValidity()) {
-      console.log("no enviar");
-    } else {
-      let res = await axios.post("http://localhost:3001/login", datos);
-      console.log(res.data);
-    }
-  };
+  // const login = () => {
+  //   Axios.post("http://localhost:3001/login", {
+  //     username: username,
+  //     password: password,
+  //   }).then((response) => {
+  //     if (response.data.message) {
+  //       setLoginStatus(response.data.message);
+  //     } else {
+  //       setLoginStatus(response.data[0].username);
+  //     }
+  //     console.log(response);
+  //   });
+  // };
 
   return (
     <div>
@@ -53,12 +49,12 @@ function Log() {
       <div className="container" id="container">
         <div className="form-container sign-in-container">
           <form
-            onSubmit={handleSubmit}
             className="needs-validation"
             noValidate={true}
             autoComplete="off"
           >
-            <h1>LOG IN</h1>
+            <h1>LOGIN</h1>
+            {/* <h1>Estado = {loginStatus}</h1> */}
             <div className="social-container">
               <header>
                 <a href="#" className="social">
@@ -73,28 +69,31 @@ function Log() {
               </header>
             </div>
             <span></span>
+            <label>User o Email</label>
             <input
               id="email"
               type="text"
-              onChange={handleInputChange}
-              value={datos.usuario}
+              // onChange={(e) => {setUserName(e.target.value);}}
               className="form-control"
               name="usuario"
               required
               autoFocus
+              // value={body.username}
             />
+            <label>Password</label>
             <input
               id="password"
               type="password"
-              onChange={handleInputChange}
-              value={datos.clave}
+              // onChange={(e) => {setPassword(e.target.value);}}
               className="form-control"
               name="clave"
               required
+              // value={body.password}
             />
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <button type="submit" className="btn btn-primary">
-              <link href="#"></link>Entrar
+            <button className="btn btn-primary">
+              {/* onClick={} */}
+              Entrar
             </button>
           </form>
         </div>
@@ -110,4 +109,4 @@ function Log() {
   );
 }
 
-export default Log;
+export default Logueo;

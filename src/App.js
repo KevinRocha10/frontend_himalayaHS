@@ -1,30 +1,26 @@
 import "./App.css";
+import React, { Suspense } from "react";
+// para usar rutas utilizamos la ruta react-router-dom
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-// importamos los componentes
-import DashboardBase from "./components/dashboard/DashboardBase";
-// import LoginForm from "./components/logueo/login";
-// import ModalRecibo from "./components/dashboard/ModalRecibo";
+// componentes
+// import FormLogin from "./components/Login/Login";
+import DashboardBase from "./components/Dashboard/DashboardBase";
 
 function App() {
   return (
-    <div>
-      <DashboardBase></DashboardBase>
-      {/* <LoginForm></LoginForm> */}
-      {/* <ModalRecibo></ModalRecibo> */}
+    <div className="App">
+      <Router>
+        {/* Lo usamos para mostrar algo mientras caga nuestra app */}
+        <Suspense fallback={<h1>Cargando...</h1>}>
+          <Routes>
+            {/* <Route exact path="/" name="Login" render={() => <FormLogin />} /> */}
+            {/* <Route path="/" name="Login" element={<FormLogin />} /> */}
+            <Route path="/app" name="Dashboard" element={<DashboardBase />} />
+          </Routes>
+        </Suspense>
+      </Router>
     </div>
-
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //   </header>
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<CompShowBlogs />} />
-    //       <Route path="/create" element={<CompCreateBlog />} />
-    //       <Route path="/edit/:id" element={<CompEditBlog />} />
-    //     </Routes>
-    //   </BrowserRouter>
-    // </div>
   );
 }
 

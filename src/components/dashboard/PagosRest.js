@@ -10,7 +10,7 @@ import {
   Button,
 } from "@tremor/react";
 import React from "react";
-import DatePicker from "../dashboard/DatePicker";
+import DatePicker from "./DatePicker";
 import TableCalendar from "./TableCalendar";
 import ModalAviso from "./ModalAviso";
 

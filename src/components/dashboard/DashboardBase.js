@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Title, Text, TabList, Tab, Block } from "@tremor/react";
-import CardGridMap from "../dashboard/CardGridMap";
-import Charts from "../dashboard/Charts";
-import TableBase from "../dashboard/TableBase";
-// import "../assets/css/dash.css";
-import "../dashboard/dash.css";
-import PagosRest from "../dashboard/PagosRest";
+import CardGridMap from "./CardGridMap";
+import Charts from "./Charts";
+import TableBase from "./TableBase";
+import "../../assets/css/dash.css";
+import PagosRest from "./PagosRest";
 
 const DashboardBase = () => {
   const [selectedView, setSelectedview] = useState(1);
@@ -73,7 +72,7 @@ const DashboardBase = () => {
           {selectedView === 1 ? (
             <>
               <CardGridMap></CardGridMap>
-
+              <hr></hr>
               {/* bloque */}
               <Block marginTop="mt-6">
                 <Charts></Charts>

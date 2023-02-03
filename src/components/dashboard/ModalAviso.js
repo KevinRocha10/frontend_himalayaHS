@@ -9,7 +9,7 @@ function ModalAviso() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow} mb-3>
         Guardar
       </Button>
 

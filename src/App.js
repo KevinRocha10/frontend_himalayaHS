@@ -4,7 +4,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // componentes
-// import FormLogin from "./components/Login/Login";
+import FormLogin from "./components/Login/Login";
 import DashboardBase from "./components/Dashboard/DashboardBase";
 
 function App() {
@@ -15,8 +15,13 @@ function App() {
         <Suspense fallback={<h1>Cargando...</h1>}>
           <Routes>
             {/* <Route exact path="/" name="Login" render={() => <FormLogin />} /> */}
-            {/* <Route path="/" name="Login" element={<FormLogin />} /> */}
-            <Route path="/app" name="Dashboard" element={<DashboardBase />} />
+            <Route exact path="/" name="login" element={<FormLogin />} />
+            <Route
+              exact
+              path="/dashboard"
+              name="dashboard"
+              element={<DashboardBase />}
+            />
           </Routes>
         </Suspense>
       </Router>

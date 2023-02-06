@@ -12,14 +12,13 @@ import {
   TableBody,
   Badge,
   Button,
-  Color,
 } from "@tremor/react";
 
-const colors: { [key: string]: Color } = {
-  "Ready for dispatch": "gray",
-  Cancelled: "rose",
-  Shipped: "emerald",
-};
+// const colors: { [key: string]: Color } = {
+//   "Ready for dispatch": "gray",
+//   Cancelled: "rose",
+//   Shipped: "emerald",
+// };
 
 const transactions = [
   {
@@ -124,7 +123,7 @@ export default function Example() {
               <TableCell>{item.item}</TableCell>
               <TableCell>
                 <Badge
-                  color={colors[item.status]}
+                  // color={colors[item.status]}
                   text={item.status}
                   size="xs"
                 />

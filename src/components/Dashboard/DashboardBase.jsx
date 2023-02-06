@@ -3,7 +3,7 @@ import { Title, Text, TabList, Tab, Block } from "@tremor/react";
 import CardGridMap from "./CardGridMap";
 import Charts from "./Charts";
 import TableBase from "./TableBase";
-import "../../assets/css/dash.css";
+import "../../styles/dash.css"
 import PagosRest from "./PagosRest";
 
 const DashboardBase = () => {

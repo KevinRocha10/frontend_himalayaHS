@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import "../../assets/css/login.css";
+// import "../../styles/login.css"
 import React from "react";
 // import Axios from "axios";
 import logo from "../../assets/img/logos.jpg";
 
-function Logueo() {
+//Source: https://stackoverflow.com/questions/47303115 
+
+export default function Logueo() {
   // const [body, setbody] = useState({ username: "", password: "" });
   // const [username, setUserName] = useState("");
   // const [password, setPassword] = useState("");
@@ -108,5 +110,3 @@ function Logueo() {
     </div>
   );
 }
-
-export default Logueo;

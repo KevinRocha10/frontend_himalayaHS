@@ -5,9 +5,12 @@ import Charts from "./Charts";
 import TableBase from "./TableBase";
 import "../../styles/dash.css"
 import PagosRest from "./PagosRest";
+import {useNavigate} from "react-router-dom"
+import "@tremor/react/dist/esm/tremor.css";
 
 const DashboardBase = () => {
   const [selectedView, setSelectedview] = useState(1);
+  const navigate = useNavigate();
 
   return (
     /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -47,7 +50,7 @@ const DashboardBase = () => {
               <span className="icon">
                 <i className="fa-solid fa-door-open"></i>
               </span>
-              <span className="title">Salir</span>
+              <span className="title" onClick={() => navigate('../', { replace: true })}>Salir</span>
             </a>
           </li>
         </ul>

@@ -1,31 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-// import "../../styles/login.css"
-import React from "react";
+// import "../../styles/login.css";
+import React, {useState }from "react";
 // import Axios from "axios";
-import logo from "../../assets/img/logos.jpg";
-
-//Source: https://stackoverflow.com/questions/47303115 
+import {useNavigate} from "react-router-dom"
+import logo from "../../images/logos.jpg";
 
 export default function Logueo() {
-  // const [body, setbody] = useState({ username: "", password: "" });
-  // const [username, setUserName] = useState("");
-  // const [password, setPassword] = useState("");
+  const [body, setBody] = useState({ username: "", password: "" });
+  const navigate = useNavigate();
 
-  // const [loginStatus, setLoginStatus] = useState("");
-
-  // const login = () => {
-  //   Axios.post("http://localhost:3001/login", {
-  //     username: username,
-  //     password: password,
-  //   }).then((response) => {
-  //     if (response.data.message) {
-  //       setLoginStatus(response.data.message);
-  //     } else {
-  //       setLoginStatus(response.data[0].username);
-  //     }
-  //     console.log(response);
-  //   });
-  // };
+  const handleChange = e => {
+    setBody({...body, [e.target.name]: e.target.value });
+  };
 
   return (
     <div>
@@ -52,20 +38,18 @@ export default function Logueo() {
         <div className="form-container sign-in-container">
           <form
             className="needs-validation"
-            noValidate={true}
-            autoComplete="off"
           >
             <h1>LOGIN</h1>
-            {/* <h1>Estado = {loginStatus}</h1> */}
-            <div className="social-container">
+            
+              <div className="social-container">
               <header>
-                <a href="#" className="social">
+                <a href="https://www.facebook.com/profile.php?id=100083413627406" className="social">
                   <i className="fa-brands fa-facebook"></i>
                 </a>
-                <a href="#" className="social">
+                <a href="https://www.instagram.com/himalaya_school/" className="social">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
-                <a href="#" className="social">
+                <a href="https://web.whatsapp.com/send?phone=573176492617&amp;text=%C2%A1Bienvenido%20al%20Colegio%20Himalaya%20-%20Himalaya%20School!%0A%0AEn%20un%20momento%20te%20responderemos." className="social">
                   <i className="fa-brands fa-whatsapp"></i>
                 </a>
               </header>
@@ -73,28 +57,39 @@ export default function Logueo() {
             <span></span>
             <label>User o Email</label>
             <input
-              id="email"
-              type="text"
-              // onChange={(e) => {setUserName(e.target.value);}}
-              className="form-control"
-              name="usuario"
-              required
+              fullWidth
               autoFocus
-              // value={body.username}
+              margin= "normal"
+              variant="outlined"
+              id="user"
+              name="username"
+              value={body.username}
+              type="text"
+              className="form-control"
+              required
+              onChange={handleChange}
             />
             <label>Password</label>
             <input
-              id="password"
-              type="password"
-              // onChange={(e) => {setPassword(e.target.value);}}
-              className="form-control"
-              name="clave"
-              required
-              // value={body.password}
+            fullWidth
+            autoFocus
+            margin= "normal"
+            variant="outlined"
+            id="password"
+            name="password"
+            value={body.password}
+            type="password"
+            className="form-control"
+            required
+            onChange={handleChange}
             />
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <button className="btn btn-primary">
-              {/* onClick={} */}
+            <button 
+              fullWidth
+              variant="contained"
+              // className="btn btn-primary" onClick={() => onSubmit}
+              onClick={() => navigate('../dashboard', { replace: true })}
+              >
               Entrar
             </button>
           </form>

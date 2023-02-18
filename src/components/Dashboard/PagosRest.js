@@ -68,7 +68,9 @@ const PagosRest = () => {
           <TextInput type="text" name="name" placeholder="" />
         </Card>
       </Col>
-      <ModalAviso></ModalAviso>
+      <Button text="">
+        <ModalAviso></ModalAviso>
+      </Button>
       <Button text="Cancelar"></Button>
       <Col numColSpan={2} numColSpanLg={3}>
         <Card>
